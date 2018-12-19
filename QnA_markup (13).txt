@@ -1,0 +1,107 @@
+Title: Petition for Extreme Risk Protection Order
+Author: Paul Knapp
+Before:
+<h2 style="text-align:center;">Petition for Extreme Risk Protection Order</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/">class project</a>. You should not rely on it as a source of legal information. </b></p>
+<p><b> This service is intended to guide the user through the process of filing a petition for an Extreme Risk Protection Order (ERPO), in accordance with G.L. c. 140, § 131R. </b></p>
+<input type="hidden" name="name" value="Petition for Extreme Risk Protection Order"/>
+<input type="hidden" name="docx_uri" value="https://paulrknapp.github.io/ctl/Petition%20for%20Extreme%20Risk%20Protection%20Order.docx"/>
+
+
+Q(1): Hi! I am here to help. If this is an emergency, please immediately call 911 from a safe location. If you are a Police Officer, consider first filing a <a href="https://www.mass.gov/files/documents/2017/02/zx/petition-find-unsuitability-firearm-id-card-and-initial-determination.pdf">Petition to Find Unsuitability for FID and Initial Determination.</a> GOTO:2
+Q(2): Please read the messages thoroughly and respond carefully. This should only take 5-10 minutes. GOTO:Name
+Q(Name): What is your name?
+X:
+	Q(3.1):GOTO:Respondent
+Q(Respondent): What is the name of the person you are petitioning against?
+X:
+	Q(4.1):GOTO:Address
+Q(Address): What is his/her home address?
+X:
+	Q(5.1):GOTO:Authority
+A: I don't know his/her address
+	Q(5.2):GOTO:CallThePolice
+Q(Authority): Let's get a little more information about your relationship to the Respondent. Please respond to the following statements: <p>"I am the licensing authority of the municipality where the Respondent lives."</p>
+A(x): Yes
+	Q(6.1):GOTO:Blood
+A(_): No
+	Q(6.2):GOTO:Blood
+Q(Blood): "I am, or was, related to the Respondent by blood or marriage."
+A(x): Yes
+	Q(7.1):GOTO:Child
+A(_): No
+	Q(7.2):GOTO:Child
+Q(Child): "I have, or am having, a child in common with the Respondent."
+A(x): Yes
+	Q(8.1):GOTO:Dating
+A(_): No
+	Q(8.2):GOTO:Dating
+Q(Dating): "I am, or was, in a substantive dating relationship with the Respondent."
+A(x): Yes
+	Q(9.1):GOTO:Residing
+A(_): No
+	Q(9.2):GOTO:Residing
+Q(Residing): "I reside, or was residing, with the Respondent in the same household."
+A(x): Yes
+	Q(10.1):GOTO:Engaged
+A(_): No
+	Q(10.2):GOTO:Engaged
+Q(Engaged): "I am, or was, engaged to the Respondent."
+A(x): Yes
+	Q(11.1):GOTO:Married
+A(_): No
+	Q(11.2):GOTO:Married
+Q(Married): "I am, or was married to the Respondent."
+A(x): Yes
+	Q(12.1):GOTO:FID
+A(_): No
+	Q(12.2):GOTO:FID
+Q(FID): Please select the most accurate response:
+A: I believe that he/she has a firearm identification card and/or license to carry firearms.
+	Q(13.1):GOTO:Firearms
+A: I DO NOT believe that he/she has a firearm identification card and/or license to carry firearms.
+	Q(13.2):GOTO:IllegalArms
+Q(Firearms): Please list all firearms, rifles, shotguns, machine guns, weapons, or ammunition you believe he/she controls, owns, or possesses:
+X:
+	Q(14.1):GOTO:Location
+Q(Location): Where in the house are his/her firearms, rifles, shotguns, machine guns, weapons, or ammunition located?
+X:
+	Q(15.1):GOTO:Why
+A: They are located in his/her vehicle.
+	Q(15.2):GOTO:Why
+A: I don't know where they are located.
+	Q(15.3):GOTO:Why
+Q(Why): Please respond as thoroughly and accurately as possible to the following statement. Do not spare any detail you think may be important. 
+<p>"Based on the following reasons, I believe that the Respondent poses a risk of causing bodily injury to self or others by having in the Respondent's control firearms, rifles, shotguns, machine guns, stun guns or ammunition:"</p>
+X:
+	Q(16.1):GOTO:Renewal
+Q(Renewal): Is this the renewal of an original order?
+A(x): Yes
+	Q(17.1):GOTO:Long
+A(_): No
+	Q(17.2):GOTO:Long
+Q(Long): Almost done! Read this next part carefully. <p>First, are you filing this petition after 4:30 p.m. or before 8:00 a.m. Monday-Friday; on a Saturday or Sunday; or, on a Holiday?</p>
+A: Yes
+	Q(18.1):GOTO:Long2
+A: No
+	Q(18.2):GOTO:Courthouse
+Q(Long2): Please contact your local police department at this time. A Police Officer will come to you, contact an "on-call" judge, and read to him or her your petition. If the petition is granted, the judge will order an Emergency ERPO, at which time a police officer will go to the Respondent's home and remove the firearms, ammunition, FID card, etc. GOTO:Long3
+Q(Long3): Keep in mind, this order will be temporary and will only last until the end of the next court day. To have the order extended and request a hearing, you must go to your local courthouse during court hours to request the hearing.</p> GOTO:Courthouse
+Q(Courthouse): If you are filing this petition within court hours, we need to figure out where you will file. Which of the following applies to you?
+A[https://www.mass.gov/orgs/boston-municipal-court/locations?_page=1]: I live in Boston; I don't know which courthouse to go to. 
+	Q(21.1):GOTO:Division
+A[https://www.mass.gov/orgs/district-court/locations?_page=1]: I do not live in Boston; I don't know which courthouse to go to.
+	Q(21.2):GOTO:Division
+A[https://www.mass.gov/orgs/district-court/locations?_page=1]: I live in Boston; I wish to file in the Massachusetts District Courts, but I don't know which courthouse to go to.
+	Q(21.3):GOTO:Division
+A: I know which courthouse I am supposed to file in.
+	Q(21.4):GOTO:Division
+Q(Division): What Division (courthouse) will you file in?
+X:
+	Q(22.1):GOTO:Print
+
+Q(Print): You're finished! Now, all you have to do is print out your form and take it to your courthouse, or give it to the police officer to read to the "on-call" judge if this is an after-hours Emergency ERPO. <p>Ready to download your filled out form?</p>
+A[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]: Yes
+
+Q(CallThePolice): Please refer this issue to the Police. Make sure you are in a safe place and dial 911.
+Q(IllegalArms): If he/she does not have a firearm identification card and/or license to carry firearms, but is in possession of firearms, please refer this issue to the Police. Make sure you are in a safe place and dial 911.
